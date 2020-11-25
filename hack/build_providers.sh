@@ -44,4 +44,4 @@ VERSION=1.13.1
 clone_build
 
 
-zip archive.zip $PROVIDERS_PATH
+zip -r archive.zip $PROVIDERS_PATH
