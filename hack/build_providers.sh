@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ARCHIVE_FILE=$1
+[[ -z $ARCHIVE_FILE ]] && ARCHIVE_FILE=/tmp/archive.zip
+
 PROVIDERS_PATH=/tmp/providers_ppc64le
 REGISTRY_PATH=$PROVIDERS_PATH/registry.terraform.io
 mkdir -p $REGISTRY_PATH
@@ -44,4 +47,4 @@ VERSION=1.13.1
 clone_build
 
 
-zip -r archive.zip $PROVIDERS_PATH
+zip -r $ARCHIVE_FILE $PROVIDERS_PATH

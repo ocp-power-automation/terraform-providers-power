@@ -11,12 +11,12 @@ before_script:
 - sudo apt install zip git -y
 
 script:
-- hack/build_providers.sh
+- hack/build_providers.sh /tmp/archive.zip
 
 deploy:
   provider: releases
   api_key: ${GITHUB_OAUTH_TOKEN}
-  file: archive.zip
+  file: /tmp/archive.zip
   skip_cleanup: true
   on:
     tags: true
