@@ -1,4 +1,7 @@
 language: go
+
+os: linux-ppc64le
+
 script:
 - go get -d -v github.com/community-terraform-providers/terraform-provider-ignition@v2.1.1
 - mkdir bin
@@ -10,6 +13,7 @@ deploy:
   api_key: ${GITHUB_OAUTH_TOKEN}
   file: bin.zip
   skip_cleanup: true
+
 env:
   global:
     secure: cYpSiG49xrnoq9jgsordd0mLziu37rLl6mLbtMSE8Y8qdygrE3lm/zBWQggpMWTB+3phV90HLWMQwnMYPV6oHx+3qh91GtYG8aQvC1Dkon+pXgGkX9PZaVkIpdDpvErSy4q3x16y2eSWUV/VY+64dWlAkhSHw0nSX9yvQZvOHnSCQAbYm1OM/+X2My4dTpwIptp5NK88lJ3Fw4OyThX6zf64Qg80ANOZx3MzSvOlNTxOlWbZ1qY9zibd1QjLSBer7tsDaKEH/9jSpzHHjW+Yfqq9lb0gzWDCu0mL+JHWtyORflh1U8a/Y7eXlAZ5Fed2x1bnfV5S0QfVeEZ+YKQih95JhdrouS7cYs9iEoi/ZeWdiaFToGQhUwCLbH/dhJLmbYMNViAOy2J4HO6ovtv96XTmTI6NvacpgFiPBzgs0uYiRiJhtMG6lVpRBuehm6VCufH7dMql3ArJPHIE86o902G9v80/QScD0v82Lc2LE/38cOItHJu1SK62komYIuDOsVtqS0AsT7xQAUV9EexW6h49828NPXdUrU1YHOdcefZgyPEScTZMfBjhoGKBIjn7vPIddXUtcC64+5ashJwofOh+z3lvlq5PiCTnao6t1BFzej9dmehEtoZV3o8rD5XWYg8HvcWhpmOtowJ+Asco54r1atkSk7nLVA8t1ehB3Qo=
