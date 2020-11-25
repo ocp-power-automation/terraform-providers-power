@@ -1,17 +1,17 @@
 language: go
+
 arch: ppc64le
 os: linux
+
 go:
 - 1.15
 
 before_script:
 - sudo apt update -y
 - sudo apt install zip git -y
+
 script:
-- git clone -b v2.1.1 https://github.com/community-terraform-providers/terraform-provider-ignition $GOPATH/src/github.com/terraform-providers/terraform-provider-ignition
-- cd $GOPATH/src/github.com/terraform-providers/terraform-provider-ignition
-- make build
-- zip archive.zip $GOPATH/bin/
+- hack/build_providers.sh
 
 deploy:
   provider: releases
@@ -19,7 +19,7 @@ deploy:
   file: archive.zip
   skip_cleanup: true
   on:
-    branch: release
+    tags: true
 
 env:
   global:
