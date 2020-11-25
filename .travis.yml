@@ -1,7 +1,8 @@
 language: go
-
-os: linux-ppc64le
-
+arch: ppc64le
+os: linux
+go:
+- 1.6
 script:
 - go get -d -v github.com/community-terraform-providers/terraform-provider-ignition@v2.1.1
 - mkdir bin
