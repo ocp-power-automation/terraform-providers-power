@@ -9,42 +9,42 @@ mkdir -p $REGISTRY_PATH
 
 
 function clone_build {
-  git clone -b v$VERSION https://github.com/$PROVIDER_ORG/$PROVIDER_NAME $GOPATH/src/github.com/$PROVIDER_ORG/$PROVIDER_NAME
-  cd $GOPATH/src/github.com/$PROVIDER_ORG/$PROVIDER_NAME
+  git clone -b v$VERSION https://github.com/$PROVIDER_ORG/terraform-provider-$PROVIDER_NAME $GOPATH/src/github.com/$PROVIDER_ORG/terraform-provider-$PROVIDER_NAME
+  cd $GOPATH/src/github.com/$PROVIDER_ORG/terraform-provider-$PROVIDER_NAME
   make build
   mkdir -p $REGISTRY_PATH/$PROVIDER_ORG/$PROVIDER_NAME/$VERSION/linux_ppc64le
-  mv $GOPATH/bin/$PROVIDER_NAME $REGISTRY_PATH/$PROVIDER_ORG/$PROVIDER_NAME/$VERSION/linux_ppc64le
+  mv $GOPATH/bin/terraform-provider-$PROVIDER_NAME $REGISTRY_PATH/$PROVIDER_ORG/$PROVIDER_NAME/$VERSION/linux_ppc64le
 }
 
-PROVIDER_NAME=terraform-provider-ignition
+PROVIDER_NAME=ignition
 PROVIDER_ORG=community-terraform-providers
 VERSION=2.1.1
 clone_build
 
-PROVIDER_NAME=terraform-provider-ignition
+PROVIDER_NAME=ignition
 PROVIDER_ORG=terraform-providers
 VERSION=1.2.1
 clone_build
 
-PROVIDER_NAME=terraform-provider-null
+PROVIDER_NAME=null
 PROVIDER_ORG=hashicorp
 VERSION=2.1.2
 clone_build
 
-PROVIDER_NAME=terraform-provider-random
+PROVIDER_NAME=random
 PROVIDER_ORG=hashicorp
 VERSION=2.3.1
 clone_build
 
-PROVIDER_NAME=terraform-provider-openstack
+PROVIDER_NAME=openstack
 PROVIDER_ORG=terraform-provider-openstack
 VERSION=1.32.0
 clone_build
 
-PROVIDER_NAME=terraform-provider-ibm
+PROVIDER_NAME=ibm
 PROVIDER_ORG=IBM-Cloud
 VERSION=1.13.1
 clone_build
 
-
-zip -r $ARCHIVE_FILE $PROVIDERS_PATH
+cd $PROVIDERS_PATH
+zip -r $ARCHIVE_FILE ./
