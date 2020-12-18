@@ -21,7 +21,7 @@ This table shows which Terraform provider plugins are compiled and distributed i
 |ignition|https://github.com/terraform-providers/terraform-provider-ignition|v1.2.1|linux_ppc64le|
 |ignition|https://github.com/community-terraform-providers/terraform-provider-ignition|v2.1.2|linux_ppc64le|
 |openstack|https://github.com/terraform-provider-openstack/terraform-provider-openstack|v1.32.0|linux_ppc64le|
-|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|v1.13.1|linux_ppc64le|
+|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|v1.15.0|linux_ppc64le|
 
 
 
