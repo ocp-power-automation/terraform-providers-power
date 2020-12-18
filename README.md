@@ -44,7 +44,7 @@ curl -L https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/latest/terraform
 ```
 Download the latest archive.zip from [releases page](../../releases) on you Power system from where you will be running the Terraform automation.
 ```
-curl -L https://github.com/yussufsh/providers_ppc64le/releases/download/v0.6/archive.zip -o archive.zip
+curl -L https://github.com/yussufsh/providers_ppc64le/releases/download/v0.7/archive.zip -o archive.zip
 ```
 Extract the archive.zip downloaded in the previous step.
 ```
