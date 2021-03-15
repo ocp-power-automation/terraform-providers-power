@@ -38,13 +38,13 @@ Change to the Terraform auomtation directory.
 cd ocp4-upi-powervm/
 ```
 
-Download the latest Terraform binary for IBM Power from https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/latest/.
+Download the Terraform 0.13.6 binary for IBM Power from https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/terraform-0.13.6.
 ```
-curl -L https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/latest/terraform-0.13.5 -o /usr/bin/terraform && chmod +x /usr/bin/terraform
+curl -L https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/terraform-0.13.6 -o /usr/bin/terraform && chmod +x /usr/bin/terraform
 ```
 Download the latest archive.zip from [releases page](../../releases) on you Power system from where you will be running the Terraform automation.
 ```
-curl -L https://github.com/yussufsh/providers_ppc64le/releases/download/v0.7/archive.zip -o archive.zip
+curl -L https://github.com/ocp-power-automation/terraform-providers-power/releases/download/v0.7/archive.zip -o archive.zip
 ```
 Extract the archive.zip downloaded in the previous step.
 ```
