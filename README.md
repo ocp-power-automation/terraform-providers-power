@@ -1,61 +1,60 @@
 # Introduction
 
-Generates an archive of all the required providers plugins for running the [Terraform automation](#terraform-automation) projects on IBM Power systems.
+Generates an archive of all the required providers plugins for running the [Terraform Automation Projects](#terraform-automation-projects) on IBM Power systems.
 
-### Terraform automation
+### Terraform Automation Projects
 
-Following projects can be run on Power systems when you complete the steps in [How to use](#how-to-use).
+Below projects can be run on Power systems by following the [Instructions](#instructions).
 
 [1] [https://github.com/ocp-power-automation/ocp4-upi-powervs/](https://github.com/ocp-power-automation/ocp4-upi-powervs/)
 
 [2] [https://github.com/ocp-power-automation/ocp4-upi-powervm/](https://github.com/ocp-power-automation/ocp4-upi-powervm/)
 
-### Providers and version
+### List of Terraform Providers
 
-This table shows which Terraform provider plugins are compiled and distributed in archive.zip.
+This table shows which Terraform provider plugins are compiled and distributed in archive.zip for `linux_ppc64le`. The [releases page](../../releases) will have the version information for each provider.
 
-|Provider Name| Github repo|Version|OS_Arch|
-|-------------|------------|-------|-------|
-|null|https://github.com/hashicorp/terraform-provider-null|v2.1.2|linux_ppc64le|
-|random|https://github.com/hashicorp/terraform-provider-random|v2.3.1|linux_ppc64le|
-|ignition|https://github.com/terraform-providers/terraform-provider-ignition|v1.2.1|linux_ppc64le|
-|ignition|https://github.com/community-terraform-providers/terraform-provider-ignition|v2.1.2|linux_ppc64le|
-|openstack|https://github.com/terraform-provider-openstack/terraform-provider-openstack|v1.32.0|linux_ppc64le|
-|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|v1.15.0|linux_ppc64le|
+|Provider Name| Github repo|
+|-------------|------------|
+|null|https://github.com/hashicorp/terraform-provider-null|
+|random|https://github.com/hashicorp/terraform-provider-random|
+|ignition|https://github.com/terraform-providers/terraform-provider-ignition|
+|ignition|https://github.com/community-terraform-providers/terraform-provider-ignition|
+|openstack|https://github.com/terraform-provider-openstack/terraform-provider-openstack|
+|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|
 
 
 
-# How to use
+# Instructions
 
-Ensure you have downloaded OR cloned the code from one of the [Terraform automation](#terraform-automation) project.
+1. Clone the required branch from one of the [Terraform Automation Projects](#terraform-automation-projects) on your Power system.
 
+Example:
 ```
-git clone https://github.com/ocp-power-automation/ocp4-upi-powervm
-```
-
-Change to the Terraform auomtation directory.
-```
+git clone https://github.com/ocp-power-automation/ocp4-upi-powervm --branch <branch_name>
 cd ocp4-upi-powervm/
 ```
 
-Download the Terraform 0.13.6 binary for IBM Power from https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/terraform-0.13.6.
+2. Download the required version of Terraform binary for IBM Power from https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/.
 ```
-curl -L https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/terraform-0.13.6 -o /usr/bin/terraform && chmod +x /usr/bin/terraform
+curl -L https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/terraform-<version> -o /usr/bin/terraform
+chmod +x /usr/bin/terraform
 ```
-Download the latest archive.zip from [releases page](../../releases) on you Power system from where you will be running the Terraform automation.
+
+3. Download and extract the required version of archive.zip from [releases page](../../releases).
 ```
-curl -L https://github.com/ocp-power-automation/terraform-providers-power/releases/download/v0.7/archive.zip -o archive.zip
-```
-Extract the archive.zip downloaded in the previous step.
-```
+curl -L https://github.com/ocp-power-automation/terraform-providers-power/releases/download/<release_version>/archive.zip -o archive.zip
 unzip archive.zip
 ```
-Validate that the plugins are present in the current directory.
+
+4. Validate that the plugins are present in the current directory.
 ```
 ls -lrt registry.terraform.io/
 ```
-Run the terraform init command to use the local plugins.
+
+5. Run the terraform init command to use the plugins downloaded locally.
 ```
 terraform init --plugin-dir ./
 ```
-Congratulations! Now you can run the terraform commands to create your cluster from a Power machine. Please refer to the README of [Terraform automation](#terraform-automation) projects.
+
+Congratulations! Now you can run the terraform commands to create your cluster from a Power machine. Please refer to the README of [Terraform Automation Projects](#terraform-automation-projects) for further information.
