@@ -18,32 +18,32 @@ function clone_build {
 
 PROVIDER_NAME=ignition
 PROVIDER_ORG=community-terraform-providers
-VERSION=2.1.1
+VERSION=2.1.2
 clone_build
 
 PROVIDER_NAME=ignition
 PROVIDER_ORG=terraform-providers
-VERSION=1.2.1
+VERSION=2.1.2
 clone_build
 
 PROVIDER_NAME=null
 PROVIDER_ORG=hashicorp
-VERSION=2.1.2
+VERSION=3.1.0
 clone_build
 
 PROVIDER_NAME=random
 PROVIDER_ORG=hashicorp
-VERSION=2.3.1
+VERSION=3.1.0
 clone_build
 
 PROVIDER_NAME=openstack
 PROVIDER_ORG=terraform-provider-openstack
-VERSION=1.32.0
+VERSION=1.44.0
 clone_build
 
 PROVIDER_NAME=ibm
 PROVIDER_ORG=IBM-Cloud
-VERSION=1.24.0
+VERSION=1.33.1
 clone_build
 
 cd $PROVIDERS_PATH
