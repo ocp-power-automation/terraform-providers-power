@@ -43,7 +43,7 @@ clone_build
 
 PROVIDER_NAME=ibm
 PROVIDER_ORG=IBM-Cloud
-VERSION=1.36.0
+VERSION=1.39.0
 clone_build
 
 cd $PROVIDERS_PATH
