@@ -4,7 +4,7 @@ arch: ppc64le
 os: linux
 
 go:
-- 1.15
+- 1.18
 
 before_script:
 - sudo apt update -y
