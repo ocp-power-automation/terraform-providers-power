@@ -18,7 +18,7 @@ function clone_build {
 
 PROVIDER_NAME=ignition
 PROVIDER_ORG=community-terraform-providers
-VERSION=2.1.1
+VERSION=2.1.3
 clone_build
 
 PROVIDER_NAME=ignition
@@ -28,12 +28,12 @@ clone_build
 
 PROVIDER_NAME=null
 PROVIDER_ORG=hashicorp
-VERSION=2.1.2
+VERSION=3.2.1
 clone_build
 
 PROVIDER_NAME=random
 PROVIDER_ORG=hashicorp
-VERSION=2.3.1
+VERSION=3.4.3
 clone_build
 
 PROVIDER_NAME=openstack
