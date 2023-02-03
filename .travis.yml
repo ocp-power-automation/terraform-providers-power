@@ -3,6 +3,7 @@ language: go
 dist: focal # default (xenial) does not work
 arch: ppc64le
 os: linux
+group: edge
 
 go:
 - 1.18
@@ -14,24 +15,14 @@ before_script:
 script:
 - hack/build_providers.sh /tmp/archive.zip
 
-before_deploy:
-  - cd /tmp
-  - git clone https://github.com/travis-ci/dpl
-  - cd dpl
-  - git checkout v1.10.16
-  - sed -i 's/< 0.16.0/~> 0.17.3/g' dpl-releases.gemspec
-  - sed -i 's/4.6.2/4.15.0/g' dpl-releases.gemspec
-  - gem build dpl-releases.gemspec && cp *.gem "$TRAVIS_BUILD_DIR"
-  - cd $TRAVIS_BUILD_DIR
-
 deploy:
   provider: releases
   api_key: ${GITHUB_OAUTH_TOKEN}
   file: /tmp/archive.zip
   skip_cleanup: true
-  edge: local
   on:
     tags: true
+  edge: true
 
 env:
   global:
