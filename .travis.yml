@@ -3,6 +3,7 @@ language: go
 dist: focal # default (xenial) does not work
 arch: ppc64le
 os: linux
+group: edge
 
 go:
 - 1.18
