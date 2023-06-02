@@ -12,17 +12,17 @@ Below projects can be run on Power systems by following the [Instructions](#inst
 
 ### List of Terraform Providers
 
-This table shows which Terraform provider plugins are compiled and distributed in archive.zip for `linux_ppc64le`. The [releases page](../../releases) will have the version information for each provider.
+This table shows which Terraform provider plugins are compiled and distributed in archive.zip for `linux/ppc64le` as part of latest [release](../../releases).
 
-|Provider Name| Github repo|
-|-------------|------------|
-|null|https://github.com/hashicorp/terraform-provider-null|
-|random|https://github.com/hashicorp/terraform-provider-random|
-|ignition|https://github.com/terraform-providers/terraform-provider-ignition|
-|ignition|https://github.com/community-terraform-providers/terraform-provider-ignition|
-|openstack|https://github.com/terraform-provider-openstack/terraform-provider-openstack|
-|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|
-
+Provider versions:
+|Provider Name| Github repo|Version|OS/Arch|
+|-------------|------------|-------|-------|
+|null|https://github.com/hashicorp/terraform-provider-null|v3.1.2|linux/ppc64le|
+|random|https://github.com/hashicorp/terraform-provider-random|v3.4.3|linux/ppc64le|
+|ignition|https://github.com/terraform-providers/terraform-provider-ignition|v1.2.1|linux/ppc64le|
+|ignition|https://github.com/community-terraform-providers/terraform-provider-ignition|v2.1.3|linux/ppc64le|
+|openstack|https://github.com/terraform-provider-openstack/terraform-provider-openstack|v1.32.0|linux/ppc64le|
+|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|v1.52.0|linux/ppc64le|
 
 
 # Instructions
