@@ -1,12 +1,12 @@
 language: go
 
-dist: focal # default (xenial) does not work
+dist: jammy
 arch: ppc64le
 os: linux
 group: edge
 
 go:
-- 1.18
+- 1.21.6
 
 before_script:
 - sudo apt update -y
