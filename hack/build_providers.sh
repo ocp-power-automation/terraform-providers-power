@@ -10,9 +10,10 @@ mkdir -p $REGISTRY_PATH
 
 
 function clone_build {
+  echo "Installing github.com/$PROVIDER_ORG/terraform-provider-$PROVIDER_NAME v$VERSION"
   git clone -b v$VERSION https://github.com/$PROVIDER_ORG/terraform-provider-$PROVIDER_NAME $GOPATH/src/github.com/$PROVIDER_ORG/terraform-provider-$PROVIDER_NAME
   cd $GOPATH/src/github.com/$PROVIDER_ORG/terraform-provider-$PROVIDER_NAME
-  [[ ! $(make install) ]] && echo "[DEBUG] Cannot run install target, trying build target now..." && make build
+  go install -v ./...
   mkdir -p $REGISTRY_PATH/$PROVIDER_ORG/$PROVIDER_NAME/$VERSION/linux_ppc64le
   mv $GOPATH/bin/terraform-provider-$PROVIDER_NAME $REGISTRY_PATH/$PROVIDER_ORG/$PROVIDER_NAME/$VERSION/linux_ppc64le
 }
