@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 ARCHIVE_FILE=$1
 [[ -z $ARCHIVE_FILE ]] && ARCHIVE_FILE=/tmp/archive.zip
