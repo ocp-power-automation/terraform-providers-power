@@ -22,7 +22,8 @@ Provider versions:
 |ignition|https://github.com/terraform-providers/terraform-provider-ignition|v1.2.1|linux/ppc64le|
 |ignition|https://github.com/community-terraform-providers/terraform-provider-ignition|v2.1.3|linux/ppc64le|
 |openstack|https://github.com/terraform-provider-openstack/terraform-provider-openstack|v1.32.0|linux/ppc64le|
-|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|v1.52.0|linux/ppc64le|
+|ibm|https://github.com/IBM-Cloud/terraform-provider-ibm|v1.60.0|linux/ppc64le|
+|time|https://github.com/hashicorp/terraform-provider-time|v0.10.0|linux/ppc64le|
 
 
 # Instructions
