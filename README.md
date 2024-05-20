@@ -36,9 +36,9 @@ git clone https://github.com/ocp-power-automation/ocp4-upi-powervm --branch <bra
 cd ocp4-upi-powervm/
 ```
 
-2. Download the required version of Terraform binary for IBM Power from https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/.
+2. Download the required version of Terraform binary for IBM Power from https://ftp2.osuosl.org/pub/ppc64el/terraform/.
 ```
-curl -L https://oplab9.parqtec.unicamp.br/pub/ppc64el/terraform/terraform-<version> -o /usr/bin/terraform
+curl -L https://ftp2.osuosl.org/pub/ppc64el/terraform/terraform-<version> -o /usr/bin/terraform
 chmod +x /usr/bin/terraform
 ```
 
